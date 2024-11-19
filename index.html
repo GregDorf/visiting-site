@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визитка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Кнопка бокового меню для мобильных устройств -->
+    <button id="menuButton">☰ Меню</button>
+    
+    <!-- Боковое меню -->
+    <nav id="sideMenu">
+        <ul>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#skills">Навыки</a></li>
+            <li><a href="#portfolio">Портфолио</a></li>
+            <li><a href="#contact">Контакты</a></li>
+			<li><a href="#order">Заказать</a></li>
+        </ul>
+        <button id="closeMenu">Закрыть</button>
+    </nav>
+
+    <!-- Основной контент с фиксированной шириной для ПК -->
+    <div class="container">
+        <!-- Шапка сайта с градиентом -->
+        <header>
+            <a href="#home" class="logo"><img src="logo.png" alt="Логотип"></a>
+            <h1>Григорьев Григорий Александрович</h1>
+            <p>Magos Adeptus Coderus #ID221987</p>
+        </header>
+		
+		<!-- Меню под логотипом для ПК версии -->
+		<nav class="main-menu">
+            <ul>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#contact">Контакты</a></li>
+				<li><a href="#order">Заказать</a></li>
+            </ul>
+        </nav>
+
+        <!-- Описание -->
+        <section id="about">
+            <h2>Обо мне</h2>
+            <p>Приветствую служителей Машины на выделенном мне объеме инфопамяти Ноосферы. Да благословит вас Дух Машины!</p>
+			<p>01010011 01101001 01101110 01100111 00100000 01010000 01110010 01100001 01101001 01110011 01100101 00100000 01110100 01101111 00100000 01110100 01101000 01100101 00001010 01000111 01101111 01100100 00100000 01101111 01100110 00100000 01000001 01101100 01101100 00100000 01001101 01100001 01100011 01101000 01101001 01101110 01100101 01110011</p>
+            <p>Я – адепт Механикус, посвятивший свою жизнь изучению древних технологий и постижению тайн машинного Духа. Мой путь начался среди холодных стен кузницы, где я постигал тайны механикума, изучая священные тексты и трактаты великих инженеров давно ушедшей эпохи.</p>
+			<p>Я верю в силу симбиоза плоти и металла, каждый имплант и протез – это шаг к совершенству и очищению от слабостей человеческого тела. Вооруженный знаниями и верой, я поддерживаю священные машины Империума, ибо через них говорит сам Омниссия.</p>
+			<p>Служу Империуму и его вечным механизмам, чтобы привести человечество к свету техно-просвещения.</p>
+        </section>
+
+        <!-- Навыки -->
+        <section id="skills">
+            <h2>Навыки</h2>
+            <ul>
+                <li>Языки семейства C, в том числе C++ и C#</li>
+                <li>Java</li>
+				<li>Arduino C</li>
+                <li>HTML & СSS</li>
+                <li>JavaScript</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </section>
+
+        <!-- Портфолио с изображениями -->
+        <section id="portfolio">
+            <h2>Портфолио</h2>
+            <article class="project">
+                <h3>Проект 1</h3>
+                <img src="project1.jpg" alt="Проект 1">
+                <p>Описание проекта. Ссылка на проект: <a href="#">Сайт проекта</a>.</p>
+            </article>
+            <article class="project">
+                <h3>Проект 2</h3>
+                <img src="project2.jpg" alt="Проект 2">
+                <p>Описание проекта. Ссылка на проект: <a href="#">Сайт проекта</a>.</p>
+            </article>
+        </section>
+
+        <!-- Контакты с таблицей и списками -->
+        <section id="contact">
+            <h2>Контакты</h2>
+            <table>
+                <tr><th>Сеть</th><th>Ссылка</th></tr>
+                <tr><td>GitHub</td><td><a href="#">https://github.com/GregDorf</a></td></tr>
+				<tr><td>Gmail</td><td><a href="#">gregdorf86@gmail.com</a></td></tr>
+            </table>
+        </section>
+		
+		<!-- Раздел "Заказать услугу" -->
+        <section id="order">
+            <h2>Заказать услугу</h2>
+            <p>Вы можете заказать разработку проекта. Свяжитесь со мной для обсуждения деталей.</p>
+            <button id="orderButton">Заказать</button>
+        </section>
+    </div>
+	
+	<!-- Модальное окно с формой заказа -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Форма заказа</h2>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="comment">Комментарий:</label>
+                <textarea id="comment" name="comment" required></textarea>
+                
+                <div class="modal-buttons">
+                    <button type="submit">Заказать</button>
+                    <button type="button" id="cancelButton">Отмена</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer>
+        <p>&copy; by Adeptus Mechanicus of Mars, M2.024 \n Praise the MACHINE SPIRIT</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
